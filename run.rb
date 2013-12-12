@@ -4,7 +4,7 @@ while(1<2)
 
 	begin
 
-		system "git reset --hard a37149541b8bf776b8786fc75f7a73461c8534c9"
+		system "git reset --hard"
 		system "git checkout bbt"
 		system "git pull origin bbt"
 
