@@ -27,7 +27,7 @@ while(1<2)
 		puts "fininsh"
 
 	rescue Exception => err
-		puts "ERRO: #{err.message}"
+		puts "ERRO: #{err.message} - #{err.backtrace}"
 	end
 end
 
