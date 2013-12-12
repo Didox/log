@@ -1,3 +1,10 @@
+def commit
+	system "git add ."
+	system "git commit -m 'commit'"
+	system "git push origin bbt"
+end
+
+
 file = "repo"
 while(1<2)
 	puts "reading file"
@@ -29,10 +36,4 @@ while(1<2)
 	rescue Exception => err
 		puts "ERRO: #{err.message} - #{err.backtrace}"
 	end
-end
-
-def commit
-	system "git add ."
-	system "git commit -m 'commit'"
-	system "git push origin bbt"
 end
