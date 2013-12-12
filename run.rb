@@ -6,6 +6,8 @@ end
 
 
 while(1<2)
+	sleep(60)
+
 	file_repo = "repo"
 
 	puts "reading file"
@@ -20,7 +22,6 @@ while(1<2)
 			system "mkdir teste"
 		rescue;end
 
-		sleep(60)
 		contents = File.read(file_repo)
 
 		if contents.include?("agora")
