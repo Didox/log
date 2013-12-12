@@ -1,7 +1,7 @@
 def commit
 	system "git add ."
 	system "git commit -m 'commit'"
-	system "git push origin bbt"
+	system "git push origin bbt --force"
 end
 
 
@@ -20,7 +20,7 @@ while(1<2)
 			system "mkdir teste"
 		rescue;end
 
-		sleep(10)
+		sleep(60)
 		contents = File.read(file_repo)
 
 		if contents.include?("agora")
