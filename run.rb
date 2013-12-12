@@ -13,18 +13,26 @@ while(1<2)
 
 		if contents.include?("agora")
 			File.open(file, 'w') { |file| file.write("ok #{Time.now}") }
-			File.open("teste/ddd-#{Time.now.to_i}", 'w') { |file| file.write("ok #{Time.now}") }
-
-			system "git add ."
-			system "git commit -m 'commit'"
-			system "git push origin bbt"
-
-			puts "push success"
+			#bate e cria log
+			File.open("teste/ddd-#{Time.now.strftime("%d-%m%Y-%h%m")}", 'w') { |file| file.write("data alterada em #{Time.now}") }
+			commit
+		elsif contents.include?("preview")
+			File.open(file, 'w') { |file| file.write("ok #{Time.now}") }
+			#somente verifica sem bater
+			File.open("teste/ddd-#{Time.now.strftime("%d-%m%Y-%h%m")}", 'w') { |file| file.write("data alterada em #{Time.now}") }
+			commit
 		end
+			
 
 		puts "fininsh"
 
 	rescue Exception => err
 		puts "ERRO: #{err.message}"
 	end
+end
+
+def commit
+	system "git add ."
+	system "git commit -m 'commit'"
+	system "git push origin bbt"
 end
