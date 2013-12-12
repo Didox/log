@@ -15,6 +15,10 @@ while(1<2)
 		system "git reset --hard"
 		system "git checkout bbt"
 		system "git pull"
+		
+		begin
+			system "mkdir teste"
+		rescue;end
 
 		sleep(10)
 		contents = File.read(file_repo)
