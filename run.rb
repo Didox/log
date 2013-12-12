@@ -5,8 +5,9 @@ def commit
 end
 
 
-file = "repo"
 while(1<2)
+	file_repo = "repo"
+
 	puts "reading file"
 
 	begin
@@ -16,7 +17,7 @@ while(1<2)
 		system "git pull"
 
 		sleep(10)
-		contents = File.read(file)
+		contents = File.read(file_repo)
 
 		if contents.include?("agora")
 			File.open(file, 'w') { |file| file.write("ok #{Time.now}") }
