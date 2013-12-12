@@ -6,7 +6,7 @@ while(1<2)
 
 		system "git reset --hard"
 		system "git checkout bbt"
-		system "git pull origin bbt"
+		system "git pull"
 
 		sleep(10)
 		contents = File.read(file)
