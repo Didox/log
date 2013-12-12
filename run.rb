@@ -14,7 +14,7 @@ while(1<2)
 
 		system "git reset --hard"
 		system "git checkout bbt"
-		system "git pull"
+		system "git pull" 
 
 		begin
 			system "mkdir teste"
