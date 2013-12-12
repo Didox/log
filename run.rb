@@ -26,12 +26,12 @@ while(1<2)
 		if contents.include?("agora")
 			File.open(file_repo, 'w') { |file| file.write("ok #{Time.now}") }
 			#bate e cria log
-			File.open("teste/file-#{Time.now.strftime("%d-%m-%Y-%h%m")}", 'w') { |file| file.write("data alterada em #{Time.now}") }
+			File.open("teste/file-#{Time.now.strftime("%d-%m-%Y-%h%m-%s")}", 'w') { |file| file.write("data alterada em #{Time.now}") }
 			commit
 		elsif contents.include?("preview")
 			File.open(file_repo, 'w') { |file| file.write("ok #{Time.now}") }
 			#somente verifica sem bater
-			File.open("teste/preview-#{Time.now.strftime("%d-%m-%Y-%h%m")}", 'w') { |file| file.write("data alterada preview em #{Time.now}") }
+			File.open("teste/preview-#{Time.now.strftime("%d-%m-%Y-%h%m-%s")}", 'w') { |file| file.write("data alterada preview em #{Time.now}") }
 			commit
 		end
 			
